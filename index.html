@@ -3,281 +3,441 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Kaustav</title>
-  
-  
+  <title>Kaustav Banerjee Funky Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Baumans" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
   
       <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      html{height:100%;width:100%}
-body {
-background:#0D343A;
-background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  );
-background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%);}
-body {
-  
-display: flex;
-align-items: center;
-justify-content: center;
-background:#0D343A;
-background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(#000000)  );
-background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(0,0,0,1) 100%);
-
-overflow:hidden;}
-
-.man {
-  width: 200px;
-  margin-top: 40px;
-  height: 360px;
+      @import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+:root {
+  --black: #000;
+  --red: #ffe066;
+  --beige: #80dfff;
+  --grayish: #adebad;
+  --brown: #ff4d4d;
 }
 
-.head {
-  width: 70px;
-  height: 70px;
-  background-color: #3EB7CA;
-  border-radius: 50%;
-  -webkit-animation-name: body;
-          animation-name: body;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+html {
+  font-size: 8px;
 }
 
-.body {
-  height: 144px;
-  width: 62px;
-  background-color: #3EC378;
-  border-radius: 100% 20% 0 0;
-  -webkit-transform: skewX(-2deg);
-          transform: skewX(-2deg);
+.container {
+  background-color: var(--beige);
+  box-shadow: 0 0 2rem -0.5rem rgba(0, 0, 0, 0.9);
+  height: 70rem;
+  margin: 10rem;
+  margin-left: 30%;
+  border-radius: 2.3em;
+  overflow: hidden;
   position: relative;
-  left: -50px;
-  -webkit-animation-name: body;
-          animation-name: body;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  width: 55rem;
 }
 
-.foot {
-  width: 40px;
-  height: 14px;
-  border-radius: 10px 80% 4px 4px;
-  -webkit-transform: skewX(5deg);
-          transform: skewX(5deg);
-  background-color: #AAD044;
-  display: inline-block;
-  -webkit-animation-name: foot;
-          animation-name: foot;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-}
-.foot:last-child {
-  margin-left: -40px;
-  -webkit-animation-delay: .9s;
-          animation-delay: .9s;
+.bauhaus {
+  display: grid;
+  grid-template-columns: 2rem 7rem 5.5rem 3.5rem 3.5rem 7.75rem;
+  grid-template-rows: 13rem 5rem 3rem 3.25rem 2rem .75rem 1.5rem 6.25rem 1.75rem 1.5rem 5.5rem 10rem;
+  margin: 10rem auto;
+  transform: rotate(-25deg) translateX(4rem);
+  width: 29.25rem;
 }
 
-.feet {
-  text-align: left;
-  position: relative;
-  top: 100px;
-  left: -66px;
-}
-.feet:before {
-  width: 120px;
-  height: 8px;
+.top-circle {
+  border-width: 5rem;
+  border-color: var(--black) var(--black) var(--red) var(--red);
+  border-style: solid;
   border-radius: 50%;
-  content: "";
-  background: rgba(0, 0, 0, 0.1);
+  grid-area: 1/1/3/5;
+  position: relative;
+  transform: rotate(45deg);
+}
+.top-circle::before {
+  background-image: linear-gradient(0deg, var(--brown), var(--brown)), linear-gradient(0deg, var(--brown), var(--brown)), linear-gradient(0deg, var(--brown), var(--brown)), linear-gradient(0deg, var(--brown), var(--brown)), linear-gradient(0deg, var(--brown), var(--brown));
+  background-size: .4rem 4.5rem, .6rem 2.25rem, .7rem 2.5rem, .4rem .4rem, 1.2rem 1rem;
+  background-repeat: no-repeat;
+  background-position: 3rem 0, 3.4rem 4.5rem, 4rem 6.75rem, 3.9rem 5rem, 4.7rem 2rem;
+  background-radius: 50%;
+  content: '';
+  display: block;
+  height: 8rem;
+  overrflow: hidden;
+  transform: rotate(-45deg);
+  width: 8rem;
+}
+.top-circle::after {
+  background-color: var(--black);
+  content: '';
+  display: block;
   position: absolute;
-  bottom: -2px;
-  left: -16px;
-  -webkit-animation-name: shadow;
-          animation-name: shadow;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  right: -6.1rem;
+  bottom: 1rem;
+  transform: rotate(-45deg);
+  width: 5rem;
+  height: 9rem;
 }
 
-@-webkit-keyframes foot {
-  20% {
-    -webkit-transform: translate3d(34px, -16px, 0) rotate(4deg);
-            transform: translate3d(34px, -16px, 0) rotate(4deg);
-  }
-  26% {
-    -webkit-transform: translate3d(34px, -10px, 4) rotate(0deg);
-            transform: translate3d(34px, -10px, 4) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate3d(56px, -6px, 0) rotate(-6deg);
-            transform: translate3d(56px, -6px, 0) rotate(-6deg);
-  }
-  44% {
-    -webkit-transform: translate3d(56px, 0, 0) rotate(0deg);
-            transform: translate3d(56px, 0, 0) rotate(0deg);
-  }
+.top-circle-text {
+  grid-area: 1/3/3/5;
 }
 
-@keyframes foot {
-  20% {
-    -webkit-transform: translate3d(34px, -16px, 0) rotate(4deg);
-            transform: translate3d(34px, -16px, 0) rotate(4deg);
-  }
-  26% {
-    -webkit-transform: translate3d(34px, -10px, 4) rotate(0deg);
-            transform: translate3d(34px, -10px, 4) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate3d(56px, -6px, 0) rotate(-6deg);
-            transform: translate3d(56px, -6px, 0) rotate(-6deg);
-  }
-  44% {
-    -webkit-transform: translate3d(56px, 0, 0) rotate(0deg);
-            transform: translate3d(56px, 0, 0) rotate(0deg);
-  }
+.text-bauhaus {
+  transform: translateY(-6rem);
+  width: 16rem;
 }
-@-webkit-keyframes body {
-  25% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  75% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-}
-@keyframes body {
-  25% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-  50% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  75% {
-    -webkit-transform: translateY(5px);
-            transform: translateY(5px);
-  }
-}
-@-webkit-keyframes shadow {
-  25% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.96);
-            transform: scale(0.96);
-  }
-}
-@keyframes shadow {
-  25% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-  75% {
-    -webkit-transform: scale(0.96);
-            transform: scale(0.96);
-  }
+.text-bauhaus textPath {
+  fill: var(--black);
+  font-size: 9.3rem;
+  font-family: "Baumans";
+  line-height: 1;
+  text-transform: uppercase;
 }
 
-.drop {
-  background:-webkit-gradient(linear,0% 0%,0% 100%, from(rgba(13,52,58,1) ), to(rgba(255,255,255,0.6))  );
-  background: -moz-linear-gradient(top, rgba(13,52,58,1) 0%, rgba(255,255,255,.6) 100%);
-	width:1px;
-	height:89px;
-	position: absolute;
-	bottom:200px;
-	-webkit-animation: fall .63s linear infinite;
-  -moz-animation: fall .63s linear infinite;
-  
+.top-circle-text-left {
+  grid-area: 1/1/3/3;
+  justify-self: right;
+  position: relative;
 }
 
-/* animate the drops*/
-@-webkit-keyframes fall {
-	to {margin-top:900px;margin-right:400px;}
+.text-staatlich {
+  transform: translateY(-7.5rem);
+  width: 16rem;
 }
-@-moz-keyframes fall {
-	to {margin-top:900px;margin-left:200px;}
-}
-#container {
-  margin:0px;
-  font-family:'Roboto';
-  text-align:right;
-  padding-right:1000px;
-  color:#999;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:500px;  
-  position:fixed;
-  width:100%;
-  bottom:45%;
-  display:block;
+.text-staatlich textPath {
+  fill: var(--brown);
+  font-size: 4rem;
+  font-family: "Baumans";
+  line-height: 1;
+  text-transform: uppercase;
+  writing-mode: rtl;
 }
 
-#flip {
-  height:50px;
-  overflow:hidden;
+.black-square-1 {
+  background-color: var(--black);
+  grid-area: 2/3/5/5;
 }
 
-#flip > div > div {
-  color:#fff;
-  padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
+.black-square-2 {
+  background-color: var(--red);
+  grid-area: 5/3/6/7;
 }
 
-#flip div:first-child {
-  animation: show 5s linear infinite;
+.black-square-3 {
+  background-color: var(--black);
+  grid-area: 7/5/12/6;
 }
 
-#flip div div {
-  background:#42c58a;
-}
-#flip div:first-child div {
-  background:#DC143C;
-}
-#flip div:last-child div {
-  background:#6737CE;
+.black-square-4 {
+  background-color: var(--black);
+  grid-area: 9/2/10/4;
 }
 
-@keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
+.black-moon {
+  background-color: var(--brown);
+  border-radius: 0 0 10rem 10rem;
+  grid-area: 12/2/13/6;
 }
 
-p {
-  position:fixed;
-  width:100%;
-  bottom:30px;
-  font-size:12px;
-  color:#999;
-  margin-top:200px;
+.brown-arch {
+  border-color: var(--black);
+  border-style: solid;
+  border-width: .2rem .2rem 0 0;
+  border-radius: 0 7.75rem 0 0;
+  grid-area: 2/6/4/7;
+  position: relative;
+}
+
+.brown-arch-small {
+  border-color: var(--black) transparent transparent;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: .2rem;
+  bottom: -1.5rem;
+  height: 2.6rem;
+  left: -1.5rem;
+  transform: rotate(45deg);
+  position: absolute;
+  width: 2.6rem;
+}
+
+.black-dot {
+  border-color: transparent var(--black) var(--black);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1.5rem;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+.gray-square-1 {
+  background-color: var(--grayish);
+  grid-area: 8/3/9/4;
+  position: relative;
+  text-align: center;
+}
+.gray-square-1 span {
+  bottom: 0;
+  font-size: 2rem;
+  left: 0;
+  letter-spacing: .25rem;
+  line-height: 1;
+  position: absolute;
+  width: 100%;
+}
+
+.gray-square-2 {
+  background-color: var(--grayish);
+  grid-area: 10/2/11/4;
+}
+
+.gray-square-3 {
+  background-color: var(--grayish);
+  grid-area: 2/5/5/6;
+}
+
+.gray-square-4 {
+  background-color: var(--grayish);
+  grid-area: 4/6/5/7;
+}
+
+.red-square-1 {
+  background-color: var(--red);
+  grid-area: 7/3/7/7;
+}
+
+.red-square-2 {
+  background-color: var(--red);
+  grid-area: 7/6/9/7;
+}
+
+.text-1923 {
+  grid-area: 9/6/10/7;
+  font-size: 2rem;
+  letter-spacing: .25rem;
+  text-align: center;
+}
+
+.text-weimar {
+  grid-area: 11/2/12/4;
+  font-size: 2.5rem;
+  letter-spacing: .55rem;
+  text-align: center;
+}
+
+.text-ausstellung {
+  align-self: end;
+  grid-area: 5/1/6/3;
+  font-size: 2.5rem;
+  justify-self: end;
+  letter-spacing: .45rem;
+  line-height: 2rem;
+  text-align: left;
+}
+.text-ausstellung:first-letter {
+  font-size: 7rem;
+}
+
+.text {
+  font-family: "Baumans";
+  text-transform: uppercase;
+}
+
+/* CSS design by @jofpin */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+body {
+  background: #ff3399;
+  padding: 10px;
+}
+
+.title-pen {
+  color: #333;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+}
+
+.title-pen span {
+  color: #55acee;
+}
+
+.user-profile {
+  margin: auto;
+  width: 65em;
+  background: #fff;
+  border-radius: 2.3em;
+  float: left;
+}
+
+.user-profile .username {
+  margin: auto;
+  margin-top: -2.40em;
+  margin-left: 3em;
+  color: #658585;
+  font-size: 5.53em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.user-profile .bio {
+  margin: auto;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 5em;
+  color: #e76043;
+  font-size: 3.5em;
+  font-family: "varela round", sans-serif;
+}
+
+.user-profile > .description {
+  margin: auto;
+  margin-top: 2.00em;
+  margin-right: 2.00em;
+  padding-left: 0.8em;
+  width: 20em;
+  color: #800000;
+  font-size: 3em;
+  font-family: Calibri;
+}
+
+.user-profile > img.avatar {
+  padding: .7em;
+  margin-left: .3em;
+  margin-top: .3em;
+  height: 10.23em;
+  width: 10.23em;
+  border-radius: 18em;
+}
+
+.user-profile ul.data {
+  margin: 2em auto;
+  height: 3.70em;
+  background: #4eb6b6;
+  text-align: center;
+  border-radius: 0 0 .3em .3em;
+}
+
+.user-profile li {
+  margin: 0 auto;
+  padding: 1.30em;
+  width: 33.33334%;
+  display: table-cell;
+  text-align: center;
+}
+
+.user-profile span {
+  font-family: "varela round", sans-serif;
+  color: #e3eeee;
+  white-space: nowrap;
+  font-size: 100px;
+  font-weight: bold;
+}
+
+.user-profile span:hover {
+  color: #daebea;
+}
+
+footer > h1 {
+  display: block;
+  text-align: center;
+  clear: both;
+  font-family: "Coda", sans-serif;
+  color: #343f3d;
+  line-height: 6;
+  font-size: 1.6em;
+}
+
+footer > h1 a {
+  text-decoration: none;
+  color: #ea4c89;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 400px;
+  left: 70%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 840px) {
+  ul {
+    width: 80vw;
+  }
+}
+ul li {
+  border-bottom: 2px solid #e6e6e6;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+ul li a {
+  display: block;
+  padding: 30px;
+  text-decoration: none;
+  color: #222;
+  transition: 0.2s ease-in-out;
+}
+
+ul li a h3 {
+  margin: 0 0 15px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+ul li a p {
+  margin: 0;
+  font-size: 20px;
+  max-width: calc(100% - 110px);
+  font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
+}
+
+ul li a i {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translatey(-50%);
+  font-size: 20px !important;
+}
+
+ul li.Twitter:hover {
+  background-color: #0077B5;
+  color: #333;
+}
+
+ul li.Dribbble:hover {
+  background-color: #80ffaa;
+}
+
+ul li.GitHub:hover {
+  background-color: #333;
+}
+
+ul li:hover {
+  box-shadow: 0 10px 15px 0 #e6e6e6;
+}
+
+ul li:hover > a {
+  color: #fff;
+}
+
+ul li:first-child {
+  border-top: 2px solid #e6e6e6;
+}
+
+header h1 {
+  font-size: 30px;
+  text-indent: 40px;
+  font-weight: bold;
 }
 
     </style>
@@ -288,55 +448,113 @@ p {
 
 <body>
 
-  <embed src="https://api.ning.com/files/TxpxFqEtkvpYZEUmPh8r33SL6fhG4U7FOdI-rE3pqiIiPnR-wWhXy632pRzs3H9EWzX*5lVylbjJYnSDmOhX0Fz8IkSwz8ec/10.mp3" width="10" height="90" loop="true" autostart="true" hidden="true" />
-<section class="rain"></section>
-<div class="man">
-  <div class="head"></div>
-  <div class="body"></div>
-  <div class="feet">
-    <div class="foot"></div>
-    <div class="foot"></div>
-  </div>
-</div>
-<div id="container">
-  <div id="flip">
-    <div><div>Guns N Roses</div></div>
-    <div><div>Rain</div></div>
-    <div><div>November</div></div>
-    
-    
-  </div>
-  <p> Thanks :) made by <a target="_blank" href="https://www.github.com/kaustav1996/"> Kaustav </a></p>
-</div>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <head>
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<header>
+  <h1>Welcome Visitor ;)</h1>
+</header>
+<div class="user-profile">
+	<img class="avatar" src="https://media.licdn.com/dms/image/C5103AQFyGchxBpssYQ/profile-displayphoto-shrink_200_200/0?e=1561593600&v=beta&t=IalqHbudLBKEcOvm6FNe77Zix1cmcIpNl_QcSLKd6y4" alt="Ash" />
+    <div class="username">Kaustav Banerjee</div>
+  <div class="bio">
+  	Python Developer
+  </div>
+    <div class="description">
+      <p>I design Python APIs (using Python Flask / Django REST Framework), Automation scripts using Python , Shell scripting , SQL (Oracle , PostgreSQL) and JAVA too.</p>
+      <p>I love to learn new technology. Currently I am into Tensorflow. Learning Machine Learning and Deep Learning along with Tensorflow. </p>
+      <p>I had a brush up with tensorflow in college only as my final year project was to build a module to be used in ITRA funded IMAGE IDGP project . The functionality of the module was to detect different breeds of Goats and Pigs. For that I used Tensorflow Object Detection to Train Models and detect from real images .</p><p>My other college project was to build a Banking Chatbot that would chat with the customer to provide various service that net banking websites provide .</p>
+      <p>In my current position as aProject Engineer in WIPRO LTD , I develop APIs , SQL Reports to be used by frontend Analytics team , Automate quite a lot of processes that reduce great deal of manual efforts using Shell , Python , JAVA . I also act as an associate consultant of <strong>Oracle Utilities Meter Data Management</strong>.</p>
+  </div>
+  
+</div>
+  <div class="container">
+  <section class="bauhaus">
+    <!-- Blocks and circles -->
+    <div class="top-circle"></div>
+    <div class="top-circle-text">
+      <svg viewBox="0 0 280 320" class="text-bauhaus">
+        <path 
+          id="bauhaus"
+          fill="transparent"
+          d="
+            M0 100 
+            C 105 100, 160 185, 160 260
+            L160 390" 
+         />  
+         <text width="500">
+          <textPath xlink:href="#bauhaus">
+            Banerjee
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <div class="top-circle-text-left">
+      <svg viewBox="0 0 280 320" class="text-staatlich">
+        <path 
+          id="staatlich"
+          fill="transparent"
+          d="
+            M100 260
+            C 100 185, 155 100, 260 100"
+         />  
+         <text width="100">
+          <textPath xlink:href="#staatlich">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kaustav
+          </textPath>
+        </text>
+      </svg>
+    </div>
+    <div class="black-square-1"></div>
+    <div class="black-square-2"></div>
+    <div class="black-square-3"></div>
+    <div class="black-square-4"></div>
+    <div class="black-moon"></div>
+    <div class="brown-arch">
+      <div class="brown-arch-small"></div>
+      <div class="black-dot"></div>
+    </div>
+    <div class="red-square-1"></div>
+    <div class="red-square-2"></div>
+    <div class="gray-square-1 text">
+      <span>01<br>Feb</span>
+    </div>
+    <div class="gray-square-2"></div>
+    <div class="gray-square-3"></div>
+    <div class="gray-square-4"></div>
+
+    <!-- Text -->
+    <div class="text text-1923">1 9 9 6</div>
+    <div class="text text-weimar">Python</div>
+    <div class="text text-ausstellung">Bangalore</div>
+  </section>
+</div>
+  <div>
+    
+<ul>
+    <li class="Twitter"><a href="https://www.linkedin.com/in/kaustav-banerjee-4b5053119/" target="blank_">
+        
+        <h3>LinkedIn</h3>
+        <p>Add me to your connections on LinkedIn.</p><i class="fa fa-dribbble"></i></a></li>
+    <li class="GitHub"><a href="https://github.com/kaustav1996" target="blank_">
+      <i class="fa fa-github"></i>
+        <h3>GitHub</h3>
+        <p>Find the repositories I  have worked on (that are open source) , my personal projects and organisations that I am a member of on GitHub</p></a></li>
+  <li class="Dribbble"><a href="https://kaustav.herokuapp.com" target="blank_">
+        
+        <h3>Blog</h3>
+
+        <p>This is where I write Blog. I mean I will start soon :P . Developed this using django-blog-it , PostgreSQL</p></a></li>
+</ul>
+  </div>
+  
   
 
-<script>
-// number of drops created.
-var nbDrop = 100; 
-
-// function to generate a random number range.
-function randRange( minNum, maxNum) {
-  return (Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
-}
-
-// function to generate drops
-function createRain() {
-
-	for( i=1;i<nbDrop;i++) {
-	var dropLeft = randRange(0,1600);
-	var dropTop = randRange(-1000,1400);
-
-	$('.rain').append('<div class="drop" id="drop'+i+'"></div>');
-	$('#drop'+i).css('left',dropLeft);
-	$('#drop'+i).css('top',dropTop);
-	}
-
-}
-// Make it rain
-createRain();	
-</script>
+    <script  src="js/index.js"></script>
 
 
 
