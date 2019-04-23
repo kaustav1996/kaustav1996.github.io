@@ -17,10 +17,8 @@ html {
   box-shadow: 0 0 2rem -0.5rem rgba(0, 0, 0, 0.9);
   height: 70rem;
   margin: 10rem;
-  margin-left: 30%;
   border-radius: 2.3em;
   overflow: hidden;
-  position: relative;
   width: 55rem;
 }
 
@@ -259,7 +257,6 @@ body {
   width: 65em;
   background: #fff;
   border-radius: 2.3em;
-  float: left;
 }
 
 .user-profile .username {
@@ -346,79 +343,71 @@ footer > h1 a {
   color: #ea4c89;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: absolute;
-  top: 400px;
-  left: 70%;
-  transform: translate(-50%, -50%);
+.social-link {
+  float: right;
+  -webkit-flex: 3;
+  flex: 3;
 }
 
-@media (max-width: 840px) {
-  ul {
-    width: 80vw;
-  }
+.social-link ul {
+  padding: 10px;
+  width: 30vw;
 }
-ul li {
+
+.social-link ul li {
   border-bottom: 2px solid #e6e6e6;
-  position: relative;
   overflow: hidden;
   transition: 0.2s ease-in-out;
 }
 
-ul li a {
+.social-link ul li a {
   display: block;
-  padding: 30px;
+  padding: 10px;
   text-decoration: none;
   color: #222;
   transition: 0.2s ease-in-out;
 }
 
-ul li a h3 {
+.social-link ul li a h3 {
   margin: 0 0 15px;
   font-size: 30px;
   font-weight: 900;
 }
 
-ul li a p {
+.social-link ul li a p {
   margin: 0;
   font-size: 20px;
   max-width: calc(100% - 110px);
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
 }
 
-ul li a i {
-  position: absolute;
-  top: 50%;
-  right: 50px;
+.social-link ul li a i {
   transform: translatey(-50%);
   font-size: 20px !important;
 }
 
-ul li.Twitter:hover {
+.social-link ul li.Twitter:hover {
   background-color: #0077B5;
   color: #333;
 }
 
-ul li.Dribbble:hover {
+.social-link ul li.Dribbble:hover {
   background-color: #80ffaa;
 }
 
-ul li.GitHub:hover {
+.social-link ul li.GitHub:hover {
   background-color: #333;
 }
 
-ul li:hover {
+.social-link ul li:hover {
   box-shadow: 0 10px 15px 0 #e6e6e6;
 }
 
-ul li:hover > a {
+.social-link ul li:hover > a {
   color: #fff;
 }
 
-ul li:first-child {
+.social-link ul li:first-child {
   border-top: 2px solid #e6e6e6;
 }
 
@@ -426,4 +415,9 @@ header h1 {
   font-size: 30px;
   text-indent: 40px;
   font-weight: bold;
+}
+
+.god-container div {
+  padding: 10px;
+  float: left;
 }
