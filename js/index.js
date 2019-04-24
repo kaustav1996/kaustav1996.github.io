@@ -20,3 +20,15 @@ $(document).ready(function(){
   }); 
   
 });
+$(document).ready(function(){
+  
+  console.log('hello!');
+	$('.footer-block-title').click(function(e) {
+    console.log('you clicked a title!')
+    e.preventDefault()
+    $(this).parent().toggleClass('open');
+  }); 
+  
+    
+    
+});
