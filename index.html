@@ -10,7 +10,8 @@
   
       <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
-      @import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+      @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 :root {
   --black: #000;
@@ -340,21 +341,6 @@ body {
   color: #daebea;
 }
 
-footer > h1 {
-  display: block;
-  text-align: center;
-  clear: both;
-  font-family: "Coda", sans-serif;
-  color: #343f3d;
-  line-height: 6;
-  font-size: 1.6em;
-}
-
-footer > h1 a {
-  text-decoration: none;
-  color: #ea4c89;
-}
-
 .social-link {
   float: right;
   -webkit-flex: 3;
@@ -362,8 +348,8 @@ footer > h1 a {
 }
 
 .social-link ul {
-  padding: 10px;
-  width: 30vw;
+  padding: 5px;
+  width: 50vw;
 }
 
 .social-link ul li {
@@ -382,25 +368,29 @@ footer > h1 a {
 
 .social-link ul li a h3 {
   margin: 0 0 15px;
-  font-size: 30px;
+  font-size: 45px;
   font-weight: 900;
 }
 
 .social-link ul li a p {
   margin: 0;
   font-size: 20px;
-  max-width: calc(100% - 110px);
   font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;
 }
 
 .social-link ul li a i {
-  transform: translatey(-50%);
-  font-size: 20px !important;
+  display: inline;
+  padding: 5px;
+  font-size: 50px !important;
+  opacity: 1;
+}
+
+.social-head {
+  display: flex;
 }
 
 .social-link ul li.Twitter:hover {
   background-color: #0077B5;
-  color: #333;
 }
 
 .social-link ul li.Dribbble:hover {
@@ -434,6 +424,526 @@ header h1 {
   float: left;
 }
 
+.code {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+.svg {
+  position: absolute;
+  bottom: -10px;
+  width: 700px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#macbook {
+  animation: macbook .7s linear;
+  transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#coder {
+  animation: coder .8s linear;
+  transform-origin: center center;
+}
+
+#coffee {
+  animation: coffee 1s linear;
+  transform-origin: 83% 80%;
+}
+
+#smoke {
+  animation: smoke 3s infinite;
+}
+
+@keyframes macbook {
+  0% {
+    transform: translateY(300px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes coder {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes coffee {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes smoke {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    transform: translateY(-15px);
+    opacity: 0;
+  }
+}
+@font-face {
+  font-family: "Icons";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/134921/Icons.eot");
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/134921/Icons.eot?#iefix") format("eot"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/134921/Icons.woff") format("woff"), url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/134921/Icons.ttf") format("truetype"), url("../fonts/Icons.svg#Icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.section-contactboxes {
+  font-family: "Dosis", sans-serif;
+  width: 40%;
+  display: float;
+  transform: translate(165%, -180%) scale(0.8);
+}
+
+a {
+  color: #66004d;
+  text-decoration: none;
+}
+
+.contact-box-cntr {
+  width: 250px;
+  display: inline;
+}
+
+.contact-box {
+  overflow: hidden;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+}
+
+.contact-box:before {
+  border-radius: 50%;
+  content: "";
+  height: 100px;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  will-change: transform, opacity;
+  z-index: 0;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-property: -moz-transform, opacity;
+  -o-transition-property: -o-transform, opacity;
+  -webkit-transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+}
+
+.contact-box:hover {
+  cursor: pointer;
+}
+
+.contact-box:hover:before {
+  opacity: 1;
+  -moz-transform: scale3d(3.4, 3.4, 1);
+  -ms-transform: scale3d(3.4, 3.4, 1);
+  -webkit-transform: scale3d(3.4, 3.4, 1);
+  transform: scale3d(3.4, 3.4, 1);
+}
+
+.contact-box:hover i, .contact-box:hover h4, .contact-box:hover p, .contact-box:hover a {
+  position: relative;
+  z-index: 2;
+  -moz-transition-property: color;
+  -o-transition-property: color;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.contact-box__title {
+  margin: 0.375rem 0 0 0;
+  font-size: 2rem;
+}
+
+.contact-box__info {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+.contact-box__icon {
+  font-size: 3.5rem;
+}
+
+.contact-box--teal {
+  color: #75bdbc;
+  border-color: #75bdbc;
+}
+
+.contact-box--teal .contact-box__title {
+  color: inherit;
+}
+
+.contact-box--teal:before {
+  background-color: #75bdbc;
+  border: 1px solid #75bdbc;
+}
+
+.contact-box--teal:hover {
+  color: white;
+}
+
+.contact-box--teal:hover a {
+  color: white;
+}
+
+.contact-box--orange {
+  color: #66004d;
+  border-color: #66004d;
+}
+
+.contact-box--orange .contact-box__title {
+  color: inherit;
+}
+
+.contact-box--orange:before {
+  background-color: #66004d;
+  border: 1px solid 	#66004d;
+}
+
+.contact-box--orange:hover {
+  color: white;
+}
+
+.contact-box--orange:hover a {
+  color: white;
+}
+
+.contact-box--green {
+  color: #66004d;
+  border-color: #66004d;
+}
+
+.contact-box--green .contact-box__title {
+  color: inherit;
+}
+
+.contact-box--green:before {
+  background-color: #66004d;
+  border: 1px solid #66004d;
+}
+
+.contact-box--green:hover {
+  color: white;
+}
+
+.contact-box--green:hover a {
+  color: white;
+}
+
+.ico {
+  line-height: 0;
+}
+
+.ico:before {
+  display: inline-block;
+  font-family: "Icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-envelope:before {
+  content: "";
+}
+
+.ico-phone:before {
+  content: "";
+}
+
+.ico-clock:before {
+  content: "";
+}
+
+.pc-footer {
+  clear: both;
+  position: relative;
+  height: 40px;
+  margin-top: -40px;
+}
+
+@media screen and (max-width: 360px) {
+  .pc-footer {
+    display: none;
+  }
+}
+.beer-container {
+  position: relative;
+  display: flex;
+  float: left;
+  transform: translate(100%, -130%);
+}
+
+.beer,
+.bubble,
+.small-bubbles,
+.drip {
+  position: absolute;
+}
+
+.bubble,
+.small-bubbles,
+.drip {
+  background: white;
+}
+
+.bubble,
+.small-bubbles {
+  border-radius: 100%;
+}
+
+.mug {
+  position: relative;
+  width: 20vmin;
+  height: 32vmin;
+  background: #EEF5F8;
+  border-radius: 2vmin;
+}
+.mug:before, .mug:after {
+  position: absolute;
+  content: '';
+}
+.mug:before {
+  z-index: -2;
+  left: 12vmin;
+  top: 6vmin;
+  width: 15vmin;
+  height: 17vmin;
+  border-radius: 19%;
+  background: #EEF5F8;
+}
+.mug:after {
+  z-index: -1;
+  width: 12vmin;
+  height: 13vmin;
+  top: 8vmin;
+  left: 13vmin;
+  background: #7DCFB6;
+  border-radius: 19%;
+}
+
+.beer {
+  top: 2vmin;
+  left: 2vmin;
+  width: 16vmin;
+  height: 28vmin;
+  background: #FFD36D;
+  border-radius: 1vmin;
+}
+.beer:before, .beer:after {
+  position: absolute;
+  content: '';
+  background: #ffc849;
+  border-radius: 100%;
+}
+.beer:before {
+  animation: 4s up infinite;
+  width: 2vmin;
+  height: 2vmin;
+  bottom: 2vmin;
+  left: 5vmin;
+  box-shadow: 7vmin -15vmin 0 #ffc849, 4vmin -10vmin 0 #ffc849, 6vmin -3vmin 0 #ffc849;
+}
+.beer:after {
+  animation: 4s up infinite;
+  width: 1.5vmin;
+  height: 1.5vmin;
+  bottom: 6vmin;
+  left: 7vmin;
+  box-shadow: -3vmin -8vmin 0 #ffc849, 7vmin -5vmin 0 #ffc849;
+}
+
+.bubble {
+  width: 10vmin;
+  height: 10vmin;
+  top: -5vmin;
+  left: -3vmin;
+}
+.bubble:before, .bubble:after {
+  position: absolute;
+  content: '';
+  background: white;
+  border-radius: 100%;
+}
+.bubble:before {
+  width: 12vmin;
+  height: 12vmin;
+  left: 5vmin;
+  top: -2vmin;
+}
+.bubble:after {
+  width: 10vmin;
+  height: 10vmin;
+  left: 14vmin;
+  top: 0vmin;
+}
+
+.small-bubbles {
+  width: 5vmin;
+  height: 5vmin;
+  top: -7vmin;
+  left: 11vmin;
+}
+.small-bubbles:before, .small-bubbles:after {
+  position: absolute;
+  content: '';
+  border-radius: 100%;
+  background: white;
+}
+.small-bubbles:before {
+  width: 3vmin;
+  height: 3vmin;
+  top: -6vmin;
+  left: -3vmin;
+}
+.small-bubbles:after {
+  width: 3vmin;
+  height: 3vmin;
+  top: -8vmin;
+  left: -8vmin;
+}
+
+.drip {
+  width: 5vmin;
+  height: 14vmin;
+  top: 1vmin;
+  border-radius: 100px;
+  left: -2vmin;
+  box-shadow: 4vmin -6vmin 0 white;
+  animation: 6s drip infinite;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(0px);
+  }
+  99% {
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes drip {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    height: 25vmin;
+  }
+}
+.mob-footer a {
+  color: #5C5C5C;
+  text-decoration: none;
+}
+
+.mob-footer ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-block-item {
+  margin: 0 10px;
+  border-top: 1px solid rgba(0, 0, 36, 0.15);
+}
+
+.footer-block-item:last-child {
+  border-bottom: 1px solid rgba(0, 0, 36, 0.15);
+}
+
+h2.footer-block-title {
+  padding: 16px 0;
+  margin: 0;
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-block-icon {
+  position: absolute;
+  right: 7px;
+  top: 14px;
+}
+
+ul.navmenu {
+  padding-bottom: 0;
+  transition: max-height .25s ease, padding-bottom .25s ease, opacity .15s ease, transform .25s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  /*   transform: translateY(-5px) */
+}
+
+.open ul.navmenu {
+  max-height: 500px;
+  padding-bottom: 20px;
+  opacity: 1;
+  /*   transform: translateY(0) */
+}
+
+.navmenu-link {
+  padding: 7px 0;
+  display: inline-block;
+  font-size: 15px;
+}
+
+@media screen and (min-width: 360px) {
+  .mob-footer {
+    display: none;
+  }
+}
+@media screen and (max-width: 360px) {
+  .mob-footer {
+    display: none;
+  }
+}
+.mob-footer {
+  display: none;
+  visibility: hidden;
+}
+
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -444,14 +954,16 @@ header h1 {
 
   <head>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <header>
-  <h1>Welcome Visitor ;)</h1>
+  <h1 style="text-align:center;">Hello World!! B-)</h1>
+  
 </header>
 <body>
+  
   <div class="god-container">
 <div class="user-profile">
 	<img class="avatar" src="https://media.licdn.com/dms/image/C5103AQFyGchxBpssYQ/profile-displayphoto-shrink_200_200/0?e=1561593600&v=beta&t=IalqHbudLBKEcOvm6FNe77Zix1cmcIpNl_QcSLKd6y4" alt="Ash" />
@@ -517,28 +1029,36 @@ header h1 {
     <div class="red-square-1"></div>
     <div class="red-square-2"></div>
     <div class="gray-square-1 text">
-      <span>01<br>Feb</span>
+      <span>FROM<br>July<br>2018</span>
     </div>
     <div class="gray-square-2"></div>
     <div class="gray-square-3"></div>
     <div class="gray-square-4"></div>
 
     <!-- Text -->
-    <div class="text text-1923">1 9 9 6</div>
+    <div class="text text-1923">SQL,<br>Shell Scripting</div>
     <div class="text text-weimar">Python</div>
     <div class="text text-ausstellung">Bangalore</div>
   </section>
 </div>
+    
+    
+    
+    
+    
   <div class='social-link'>
 <ul>
-    <li class="Twitter"><a href="https://www.linkedin.com/in/kaustav-banerjee-4b5053119/" target="blank_">
-        
-        <h3>LinkedIn</h3>
-        <p>Add me to your connections on LinkedIn.</p><i class="fa fa-dribbble"></i></a></li>
+  <li class="Twitter"><a href="https://github.com/kaustav1996" target="blank_">
+      
+      <div class="social-head"> <h3>Linked</h3>
+        <i class="fab fa-linkedin"></i></div>
+        <p>Connect me on Linkedin</p></a></li>
+    
     <li class="GitHub"><a href="https://github.com/kaustav1996" target="blank_">
-      <i class="fa fa-github"></i>
-        <h3>GitHub</h3>
-        <p>Find the repositories I  have worked on (that are open source) , my personal projects and organisations that I am a member of on GitHub</p></a></li>
+      
+      <div class="social-head"> <h3>GitHub</h3>
+        <i class="fab fa-github"></i></div>
+        <p>Visit my GitHub Profile to find my personal repositories and projects I have contributed to and organisations where I contribute.</p></a></li>
   <li class="Dribbble"><a href="https://kaustav.herokuapp.com" target="blank_">
         
         <h3>Blog</h3>
@@ -546,9 +1066,502 @@ header h1 {
         <p>This is where I write Blog. I mean I will start soon :P . Developed this using django-blog-it , PostgreSQL</p></a></li>
 </ul>
 </div>
-  </div>
+    
 
+
+<!-- <div class="ball"></div> -->
+    
+  </div>
 </body>
+
+
+<footer class="pc-footer">
+  
+  <div class="code">
+    <link href='https://fonts.googleapis.com/css?family=Dosis:700' rel='stylesheet' type='text/css'>
+  <div class="svg">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 293" style="enable-background:new 0 0 600 293;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#EFEFEF;}
+	.st1{fill:#E3E4E5;}
+	.st2{fill:#2A333A;}
+	.st3{opacity:0.5;fill:#9E9E9E;}
+	.st4{fill:#5C5E60;}
+	.st5{fill:#404244;}
+	.st6{fill:#EBECED;}
+	.st7{fill:#FFFFFF;}
+	.st8{fill:#3C2415;}
+	.st9{fill:#432818;}
+	.st10{fill:#563726;}
+	.st11{fill:#FCFCFC;}
+	.st12{opacity:0.5;fill:#FCFCFC;}
+	.st13{fill:none;stroke:#EBECED;stroke-width:5;stroke-miterlimit:10;}
+	.st14{fill:#FEFEFE;}
+	.st15{fill:#EF7665;}
+	.st16{fill:#A4D9E4;}
+	.st17{fill:#B8C7CD;}
+	.st18{fill:#474A4E;}
+	.st19{fill:#65B6C1;}
+	.st20{fill:#F46C69;}
+	.st21{fill:#7C7F83;}
+	.st22{fill:#FFFFFE;}
+	.st23{fill:#F96759;}
+</style>
+<g id="macbook">
+	<g id="macbook_1_">
+		<g>
+			<path class="st0" d="M411.4,301.7H212.1c-0.3,0-0.5-0.2-0.5-0.5V163.3c0-0.3,0.2-0.5,0.5-0.5h199.3c0.3,0,0.5,0.2,0.5,0.5v137.9
+				C411.9,301.5,411.7,301.7,411.4,301.7z"/>
+			<path class="st1" d="M394.8,257.4h-166c-0.2,0-0.4-0.2-0.4-0.4v-81.2c0-0.2,0.2-0.4,0.4-0.4h166c0.2,0,0.4,0.2,0.4,0.4V257
+				C395.2,257.2,395,257.4,394.8,257.4z"/>
+			<g>
+				<g>
+					<g>
+						<path class="st2" d="M242.8,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4H233c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H242.8z"/>
+					</g>
+					<g>
+						<path class="st2" d="M256.2,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H256.2z"/>
+					</g>
+					<g>
+						<path class="st2" d="M269.6,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H269.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M283,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H283z"/>
+					</g>
+					<g>
+						<path class="st2" d="M296.5,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H296.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M309.9,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H309.9z"/>
+					</g>
+					<g>
+						<path class="st2" d="M323.3,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H323.3z"/>
+					</g>
+					<g>
+						<path class="st2" d="M336.7,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H336.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M350.2,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H350.2z"/>
+					</g>
+					<g>
+						<path class="st2" d="M363.6,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H363.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M377.1,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H377.1z"/>
+					</g>
+					<g>
+						<path class="st2" d="M390.5,184.2c0.2,0,0.4-0.2,0.4-0.4v-3.9c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v3.9
+							c0,0.2,0.2,0.4,0.4,0.4H390.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M242.7,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H242.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M256.1,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H256.1z"/>
+					</g>
+					<g>
+						<path class="st2" d="M269.6,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H269.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M283,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H283z"/>
+					</g>
+					<g>
+						<path class="st2" d="M296.5,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H296.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M309.9,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4H300c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H309.9z"/>
+					</g>
+					<g>
+						<path class="st2" d="M323.3,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H323.3z"/>
+					</g>
+					<g>
+						<path class="st2" d="M336.7,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H336.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M350.2,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H350.2z"/>
+					</g>
+					<g>
+						<path class="st2" d="M363.6,195.3c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H363.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M380.6,195.3h1.8h8c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-8h-1.8h-13.4
+							c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4H380.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M249.6,206.8c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-16.5c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H249.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M253.2,198.3c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H253.2z"/>
+					</g>
+					<g>
+						<path class="st2" d="M276.8,206.5v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C276.7,206.8,276.8,206.7,276.8,206.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M280,198.3c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H280z"/>
+					</g>
+					<g>
+						<path class="st2" d="M293.5,198.3c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H293.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M306.9,198.3c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H306.9z"/>
+					</g>
+					<g>
+						<path class="st2" d="M330.5,206.5v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C330.4,206.8,330.5,206.7,330.5,206.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M343.9,206.5v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C343.8,206.8,343.9,206.7,343.9,206.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M357.4,206.5v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C357.3,206.8,357.4,206.7,357.4,206.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M370.8,206.5v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C370.7,206.8,370.8,206.7,370.8,206.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M383.9,206.8h6.5c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-6.5h-3.3h-6.5
+							c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h6.5H383.9z"/>
+					</g>
+					<g>
+						<path class="st2" d="M232.7,217.7c0,0.2,0.2,0.4,0.4,0.4h8.6h1.2h13.4c0.2,0,0.4-0.2,0.4-0.4V210c0-0.2-0.2-0.4-0.4-0.4h-13.4
+							h-1.2h-8.6c-0.2,0-0.4,0.2-0.4,0.4V217.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M259.6,210v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4V210c0-0.2-0.2-0.4-0.4-0.4h-9.8
+							C259.7,209.6,259.6,209.8,259.6,210z"/>
+					</g>
+					<g>
+						<path class="st2" d="M283.5,217.7V210c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C283.3,218.1,283.5,217.9,283.5,217.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M286.4,210v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4V210c0-0.2-0.2-0.4-0.4-0.4h-9.8
+							C286.6,209.6,286.4,209.8,286.4,210z"/>
+					</g>
+					<g>
+						<path class="st2" d="M299.8,210v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4V210c0-0.2-0.2-0.4-0.4-0.4h-9.8
+							C300,209.6,299.8,209.8,299.8,210z"/>
+					</g>
+					<g>
+						<path class="st2" d="M313.3,210v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4V210c0-0.2-0.2-0.4-0.4-0.4h-9.8
+							C313.4,209.6,313.3,209.8,313.3,210z"/>
+					</g>
+					<g>
+						<path class="st2" d="M337.2,217.7V210c0-0.2-0.2-0.4-0.4-0.4H327c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C337.1,218.1,337.2,217.9,337.2,217.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M350.7,217.7V210c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C350.5,218.1,350.7,217.9,350.7,217.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M364.1,217.7V210c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C363.9,218.1,364.1,217.9,364.1,217.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M367.4,209.6c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4V210
+							c0-0.2-0.2-0.4-0.4-0.4H367.4z"/>
+					</g>
+					<g>
+						<path class="st2" d="M390.6,209.6h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4V210
+							C391,209.8,390.8,209.6,390.6,209.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M232.7,229c0,0.2,0.2,0.4,0.4,0.4h13.4h1.7h8.1c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-8.1
+							h-1.7h-13.4c-0.2,0-0.4,0.2-0.4,0.4V229z"/>
+					</g>
+					<g>
+						<path class="st2" d="M275.4,229v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C275.2,229.4,275.4,229.2,275.4,229z"/>
+					</g>
+					<g>
+						<path class="st2" d="M288.4,229.4c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H288.4z"/>
+					</g>
+					<g>
+						<path class="st2" d="M302.2,229v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C302.1,229.4,302.2,229.2,302.2,229z"/>
+					</g>
+					<g>
+						<path class="st2" d="M315.6,229v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C315.5,229.4,315.6,229.2,315.6,229z"/>
+					</g>
+					<g>
+						<path class="st2" d="M329.1,229v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8
+							C328.9,229.4,329.1,229.2,329.1,229z"/>
+					</g>
+					<g>
+						<path class="st2" d="M342.1,229.4c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H342.1z"/>
+					</g>
+					<g>
+						<path class="st2" d="M355.6,229.4c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H355.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M369,229.4c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H369z"/>
+					</g>
+					<g>
+						<path class="st2" d="M372.2,221.3v7.8c0,0.2,0.2,0.4,0.4,0.4h8h1.8h8c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-8
+							h-1.8h-8C372.4,220.9,372.2,221,372.2,221.3z"/>
+					</g>
+					<g>
+						<path class="st2" d="M232.7,240.6c0,0.2,0.2,0.4,0.4,0.4h8.7h1.1h26c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-26
+							h-1.1h-8.7c-0.2,0-0.4,0.2-0.4,0.4V240.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M273.3,232.5c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H273.3z"/>
+					</g>
+					<g>
+						<path class="st2" d="M296.6,241c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H296.6z"/>
+					</g>
+					<g>
+						<path class="st2" d="M310,241c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H310z"/>
+					</g>
+					<g>
+						<path class="st2" d="M323.4,241c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4h-9.8c-0.2,0-0.4,0.2-0.4,0.4v7.8
+							c0,0.2,0.2,0.4,0.4,0.4H323.4z"/>
+					</g>
+					<g>
+						<path class="st2" d="M327,232.5c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H327z"/>
+					</g>
+					<g>
+						<path class="st2" d="M340.5,232.5c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H340.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M382.4,232.5h-1.7h-26.8c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h26.8h1.7h8.1
+							c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4H382.4z"/>
+					</g>
+					<g>
+						<path class="st2" d="M233.1,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H233.1z"/>
+					</g>
+					<g>
+						<path class="st2" d="M246.5,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H246.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M259.9,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H259.9z"/>
+					</g>
+					<g>
+						<path class="st2" d="M273.3,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H273.3z"/>
+					</g>
+					<g>
+						<path class="st2" d="M328.7,244H327h-40.2c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4H327h1.7h8.1
+							c0.2,0,0.4-0.2,0.4-0.4v-7.8c0-0.2-0.2-0.4-0.4-0.4H328.7z"/>
+					</g>
+					<g>
+						<path class="st2" d="M340.5,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H340.5z"/>
+					</g>
+					<g>
+						<path class="st2" d="M353.9,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H353.9z"/>
+					</g>
+					<g>
+						<path class="st2" d="M367.3,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H367.3z"/>
+					</g>
+					<g>
+						<path class="st2" d="M380.7,244c-0.2,0-0.4,0.2-0.4,0.4v7.8c0,0.2,0.2,0.4,0.4,0.4h9.8c0.2,0,0.4-0.2,0.4-0.4v-7.8
+							c0-0.2-0.2-0.4-0.4-0.4H380.7z"/>
+					</g>
+				</g>
+			</g>
+			<rect x="280.7" y="261.6" class="st1" width="63.2" height="35.1"/>
+		</g>
+		<g>
+			<rect x="240" y="161.8" class="st2" width="143.5" height="8.7"/>
+			<g>
+				<path class="st2" d="M411.9,162.6c0,2.6-2,4.7-4.4,4.7H216c-2.4,0-4.4-2.1-4.4-4.7V56.7c0-2.6,2-4.7,4.4-4.7h191.5
+					c2.4,0,4.4,2.1,4.4,4.7V162.6z"/>
+				<rect x="216.9" y="60.1" class="st4" width="189.7" height="99.9"/>
+				<polygon class="st5" points="258.1,159.3 240,59.7 258.1,59.7 				"/>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="coffee">
+	<g id="coffee_1_">
+		<g>
+			<path class="st6" d="M534.1,218.8l5.1-5.1c-2.6-3.5-5.7-6.5-9.3-8.9l-4.8,4.8L534.1,218.8z"/>
+			<circle class="st7" cx="508.5" cy="236.5" r="33.6"/>
+			<circle class="st6" cx="508.5" cy="236.5" r="31.2"/>
+			<circle class="st8" cx="508.5" cy="236.5" r="28.1"/>
+			<circle class="st9" cx="508.5" cy="236.5" r="24.9"/>
+			<circle class="st10" cx="508.5" cy="236.5" r="21"/>
+			<circle class="st9" cx="508.5" cy="236.5" r="19.9"/>
+			<path class="st11" d="M539.2,213.7l6.6-6.6l-9.1-9.1l-6.8,6.8C533.5,207.2,536.6,210.2,539.2,213.7z"/>
+		</g>
+		<circle class="st10" cx="508.5" cy="236.5" r="5"/>
+		<circle class="st8" cx="508.5" cy="236.5" r="4.5"/>
+		<path class="st12" d="M508.5,260.4L508.5,260.4c-13,0-23.6-10.5-23.9-23.4c0-0.3-0.2-0.5-0.5-0.5h-0.1c-0.1,0-0.2,0.1-0.3,0.1
+			s-0.1,0.2-0.1,0.3c0.3,13.5,11.3,24.4,24.9,24.4l0,0V260.4z"/>
+	</g>
+</g>
+<g id="smoke_1_">
+	<g id="smoke">
+		<path class="st13" d="M496.3,167.7c0,0,5.6,5.1,0,12.1c-5.6,7-0.5,11.3,0,12.4"/>
+		<path class="st13" d="M508.9,160.9c0,0,8,7.3,0,17.2s-0.7,16.2,0,17.6"/>
+		<path class="st13" d="M520.9,167.7c0,0,5.6,5.1,0,12.1c-5.6,7-0.5,11.3,0,12.4"/>
+	</g>
+</g>
+<g id="ipad">
+	<g id="ipad_1_">
+		<path class="st2" d="M177.8,294.9c0.2,0.4,0,1-0.4,1.2l-92.2,44.7c-0.4,0.2-1,0-1.2-0.4L27.9,224.7c-1.3-2.8-0.2-6.1,2.6-7.4
+			l83.7-40.6c2.8-1.3,6.1-0.2,7.4,2.6L177.8,294.9z"/>
+		
+			<rect x="54.4" y="200.3" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -102.2956 70.3137)" class="st14" width="94.8" height="114.7"/>
+		
+			<rect x="41.8" y="212.1" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -85.5084 56.8004)" class="st15" width="78.1" height="4.7"/>
+		
+			<rect x="53.4" y="231.3" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -99.0117 55.6345)" class="st16" width="36.2" height="23.8"/>
+		
+			<rect x="91.1" y="213" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -87.2538 70.2411)" class="st16" width="36.2" height="23.8"/>
+		
+			<rect x="59.3" y="250.2" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -99.5508 68.1041)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="61.3" y="254.2" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -101.1277 69.3735)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="63.3" y="258.3" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -102.7046 70.6429)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="65.3" y="262.4" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -104.2816 71.9123)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="67.2" y="266.4" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -105.8585 73.1817)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="69.2" y="270.5" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -107.4355 74.4511)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="71.2" y="274.5" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -109.0124 75.7205)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="73.2" y="278.6" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -110.5893 76.9898)" class="st17" width="78.1" height="0.9"/>
+		
+			<rect x="80.1" y="281.5" transform="matrix(0.8996 -0.4366 0.4366 0.8996 -116.1659 81.4789)" class="st16" width="78.1" height="23.8"/>
+	</g>
+</g>
+<g id="coder">
+	<g id="coder_1_">
+		<rect x="258.1" y="31.3" class="st18" width="106.5" height="127.9"/>
+		<rect x="258.1" y="23.6" class="st2" width="106.5" height="7.7"/>
+		<g>
+			<rect x="267.5" y="39.8" class="st19" width="8.8" height="2"/>
+			<rect x="267.5" y="43.9" class="st20" width="13.8" height="2"/>
+			<rect x="272.5" y="51.3" class="st21" width="26.1" height="2"/>
+			<rect x="303.3" y="51.3" class="st22" width="26.6" height="2"/>
+			<rect x="276.3" y="56" class="st20" width="9.3" height="2"/>
+			<rect x="290" y="56" class="st22" width="17.5" height="2"/>
+			<rect x="281.3" y="59.7" class="st21" width="22" height="2"/>
+			<rect x="307.5" y="59.7" class="st21" width="9.1" height="2"/>
+			<rect x="321.1" y="59.7" class="st19" width="17.3" height="2"/>
+			<rect x="285.5" y="63.8" class="st21" width="26.5" height="2"/>
+			<rect x="316.6" y="63.8" class="st22" width="39.3" height="2"/>
+			<rect x="272.5" y="75.8" class="st22" width="17.5" height="2"/>
+			<rect x="267.6" y="71.6" class="st21" width="17.9" height="2"/>
+			<rect x="267.6" y="83.6" class="st19" width="13.3" height="2"/>
+			<rect x="285.4" y="83.6" class="st21" width="31.2" height="2"/>
+			<rect x="272.5" y="87.3" class="st21" width="31.2" height="2"/>
+			<rect x="276.7" y="91.4" class="st22" width="13.3" height="2"/>
+			<rect x="294.2" y="91.4" class="st23" width="18.1" height="2"/>
+			<rect x="316.6" y="91.4" class="st21" width="13.3" height="2"/>
+			<rect x="280.9" y="95.5" class="st19" width="4.5" height="2"/>
+			<rect x="290" y="95.5" class="st21" width="17.6" height="2"/>
+			<rect x="312.3" y="95.5" class="st21" width="26.4" height="2"/>
+			<rect x="285.1" y="99.2" class="st22" width="31.2" height="2"/>
+			<rect x="267.6" y="107" class="st23" width="9" height="2"/>
+			<rect x="272.5" y="111.1" class="st19" width="17.6" height="2"/>
+			<rect x="294.2" y="111.1" class="st22" width="53.2" height="2"/>
+			<rect x="276.9" y="115.2" class="st21" width="26.4" height="2"/>
+			<rect x="307.6" y="115.2" class="st21" width="22.3" height="2"/>
+			<rect x="281" y="119.3" class="st21" width="35.6" height="2"/>
+			<rect x="276.9" y="127.2" class="st21" width="44.6" height="2"/>
+			<rect x="281.3" y="130.8" class="st19" width="22.4" height="2"/>
+			<rect x="307.5" y="130.8" class="st22" width="9.6" height="2"/>
+			<rect x="321.5" y="130.8" class="st23" width="35" height="2"/>
+			<rect x="285.3" y="135.4" class="st21" width="22.9" height="2"/>
+			<rect x="312.3" y="135.4" class="st21" width="13.7" height="2"/>
+			<rect x="330.4" y="135.4" class="st21" width="8.6" height="2"/>
+			<rect x="268.2" y="143.1" class="st19" width="26.9" height="2"/>
+			<rect x="273.1" y="147.2" class="st21" width="17.7" height="2"/>
+			<rect x="295" y="147.2" class="st22" width="17.7" height="2"/>
+		</g>
+	</g>
+</g>
+</svg>
+  </div>
+</div>
+
+  <div class="beer-container">
+  <div class="mug">
+    <div class="beer"></div>
+
+  </div>
+  <div class="bubble"></div>
+  <div class="small-bubbles"></div>
+  <div class="drip"></div>
+</div>
+  
+  <h1 style="font-size:50px;text-align:center;">Cheers :P </h1>
+  
+  <section class="section-contactboxes"> 
+	<div class="row">
+			<div class="large-4 columns contact-box-cntr">
+			<div class="contact-box contact-box--orange">
+				<i class="contact-box__icon ico ico-envelope"></i>
+				<h4 class="contact-box__title">Email</h4>
+				<p class="contact-box__info"><a href="mailto:kaustavsmailbox21@gmail.com">kaustavsmailbox21@gmail.com</a></p>
+			</div>
+		</div>
+		<div class="large-4 columns contact-box-cntr">
+			<div class="contact-box contact-box--green">
+				<i class="contact-box__icon ico ico-phone"></i>
+				<h4 class="contact-box__title">Phone</h4>
+				<p class="contact-box__info">+91 9051173849</p>
+			</div>
+		</div>
+	</div>
+</section>
+ 
+</footer>
   
   
 
