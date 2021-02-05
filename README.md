@@ -1,3 +1,3 @@
-#My Personal Portfolio
+# My Personal Portfolio
 
-*Designed with  by Xiaoying Riley for developers
+Designed with  by ```Xiaoying Riley``` for developers
