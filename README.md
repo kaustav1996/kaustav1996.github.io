@@ -3,4 +3,4 @@
 Designed with  by ```Xiaoying Riley``` for developers
 
 
-<a href="upi://pay?pa=setu650126084603381496@kaypay&pn=Kaustav+Banerjee&am=100.00&tr=OI-1123-345as3224&tn=Payment+for+OI-1123-345as3224&cu=INR">UPI</a>
+<a href="https://bills.pe/A6vRJ">UPI</a>
