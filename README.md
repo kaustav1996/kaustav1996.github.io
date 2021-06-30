@@ -3,5 +3,4 @@
 Designed with  by ```Xiaoying Riley``` for developers
 
 
-[![Build
-Status](https://travis-ci.org/jswanner/markdown-buttons.svg?branch=master)](https://travis-ci.org/jswanner/markdown-buttons)
+[![UPI Deep Link](https://www.vectorlogo.zone/logos/upi/upi-ar21.svg)](https://travis-ci.org/jswanner/markdown-buttons)
