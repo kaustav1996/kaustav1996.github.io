@@ -3,4 +3,4 @@
 Designed with  by ```Xiaoying Riley``` for developers
 
 
-<button name="button" onclick="http://www.google.com">Click me</button>
+[Link button](http://example.com/){: .btn .btn-purple }
